@@ -192,7 +192,7 @@ public class GitClone {
     }
 
     private static String getGitlabUrl(Scanner scanner) {
-        System.out.println("请输入您要Clone的GitLab地址【例如 http://code.sobot.com】:");
+        System.out.println("请输入您要Clone的GitLab地址【例如 https://github.com】:");
         String gitlabUrl = null;
         if (scanner.hasNextLine()) {
             gitlabUrl = scanner.nextLine();
