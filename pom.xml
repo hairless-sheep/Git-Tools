@@ -47,7 +47,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.git.clone.CloneV6</mainClass>
+                                    <mainClass>com.git.clone.GitClone</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
