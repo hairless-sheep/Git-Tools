@@ -72,7 +72,7 @@ public class GitClone {
     private static String buildDirPath(JSONObject projectJson, String clonePath) {
         String pathWithNamespace = (String) projectJson.get("path_with_namespace");
         String[] split = pathWithNamespace.split("/");
-        for (int i = 1; i < split.length; i++) {
+        for (int i = 0; i < split.length; i++) {
             clonePath = clonePath + File.separator + split[i];
         }
         return clonePath;
@@ -84,7 +84,7 @@ public class GitClone {
         System.out.println("当前项目Clone到的磁盘路径为【" + absolutePath + "】，您是否需求更换Clone到的磁盘路径【Y=是|N=否】:");
         String choose = null;
         if (scanner.hasNextLine()) {
-            choose = scanner.nextLine().toLowerCase();
+            choose = scanner.nextLine();
         }
         while (!"y".equals(choose) && !"n".equals(choose)) {
             System.out.println("请勿输入除选项外的字符！请您再次输入【Y=是|N=否】:");
@@ -97,7 +97,7 @@ public class GitClone {
             System.out.println("请输入您要Clone到的磁盘路径:");
             String targetPath = null;
             if (scanner.hasNextLine()) {
-                targetPath = scanner.nextLine().toLowerCase();
+                targetPath = scanner.nextLine();
             }
             while (StringUtils.isBlank(targetPath)) {
                 System.out.println("磁盘路径不可为空或为无效地址(不存在或非文件夹)！请输入您要Clone到的磁盘路径:");
@@ -122,7 +122,7 @@ public class GitClone {
         System.out.println("请输入您要Clone的目标分支:");
         String targetBranch = null;
         if (scanner.hasNextLine()) {
-            targetBranch = scanner.nextLine().toLowerCase();
+            targetBranch = scanner.nextLine();
         }
         while (StringUtils.isBlank(targetBranch)) {
             System.out.println("目标分支不可为空！请输入您要Clone的目标分支:");
@@ -137,7 +137,7 @@ public class GitClone {
         System.out.println("请输入您是否需要Clone指定分支【Y=是|N=否】:");
         String choose = null;
         if (scanner.hasNextLine()) {
-            choose = scanner.nextLine().toLowerCase();
+            choose = scanner.nextLine();
         }
         while (!"y".equals(choose) && !"n".equals(choose)) {
             System.out.println("请勿输入除选项外的字符！请您再次输入【Y=是|N=否】:");
@@ -153,7 +153,7 @@ public class GitClone {
         System.out.println("请输入您是否需要按照项目分组进行Clone操作【Y=是|N=否】:");
         String choose = null;
         if (scanner.hasNextLine()) {
-            choose = scanner.nextLine().toLowerCase();
+            choose = scanner.nextLine();
         }
         while (!"y".equals(choose) && !"n".equals(choose)) {
             System.out.println("请勿输入除选项外的字符！请您再次输入【Y=是|N=否】:");
