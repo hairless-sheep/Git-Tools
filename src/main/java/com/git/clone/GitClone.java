@@ -86,13 +86,13 @@ public class GitClone {
         if (scanner.hasNextLine()) {
             choose = scanner.nextLine();
         }
-        while (!"y".equals(choose) && !"n".equals(choose)) {
+        while (!"y".equalsIgnoreCase(choose) && !"n".equalsIgnoreCase(choose)) {
             System.out.println("请勿输入除选项外的字符！请您再次输入【Y=是|N=否】:");
             if (scanner.hasNextLine()) {
                 choose = scanner.nextLine();
             }
         }
-        Boolean changePath = ("y".equals(choose) ? true : false);
+        Boolean changePath = ("y".equalsIgnoreCase(choose) ? true : false);
         if (changePath) {
             System.out.println("请输入您要Clone到的磁盘路径:");
             String targetPath = null;
@@ -139,13 +139,13 @@ public class GitClone {
         if (scanner.hasNextLine()) {
             choose = scanner.nextLine();
         }
-        while (!"y".equals(choose) && !"n".equals(choose)) {
+        while (!"y".equalsIgnoreCase(choose) && !"n".equalsIgnoreCase(choose)) {
             System.out.println("请勿输入除选项外的字符！请您再次输入【Y=是|N=否】:");
             if (scanner.hasNextLine()) {
                 choose = scanner.nextLine();
             }
         }
-        Boolean needBranch = ("y".equals(choose) ? true : false);
+        Boolean needBranch = ("y".equalsIgnoreCase(choose) ? true : false);
         return needBranch;
     }
 
@@ -155,13 +155,13 @@ public class GitClone {
         if (scanner.hasNextLine()) {
             choose = scanner.nextLine();
         }
-        while (!"y".equals(choose) && !"n".equals(choose)) {
+        while (!"y".equalsIgnoreCase(choose) && !"n".equalsIgnoreCase(choose)) {
             System.out.println("请勿输入除选项外的字符！请您再次输入【Y=是|N=否】:");
             if (scanner.hasNextLine()) {
                 choose = scanner.nextLine();
             }
         }
-        Boolean groupBy = ("y".equals(choose) ? true : false);
+        Boolean groupBy = ("y".equalsIgnoreCase(choose) ? true : false);
         return groupBy;
     }
 
